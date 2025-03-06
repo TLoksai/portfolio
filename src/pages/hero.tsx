@@ -1,8 +1,8 @@
-import React from "react";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 lg:px-40 py-12 md:py-16 bg-[#E8F0F8] min-h-[70vh]">
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 lg:px-40 py-12 md:py-16 bg-gradient-to-b from-[#b9d5d6] to-white min-h-[70vh]">
+
       <div className="max-w-xl text-center md:text-left">
         <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
           Hello, I'm <span className="text-[#00796B]">Tammineni Loksai</span>
