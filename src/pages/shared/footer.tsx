@@ -1,4 +1,3 @@
-import React from "react";
 import { Linkedin, Instagram, FileText } from "lucide-react"; // Importing icons
 
 const Footer = () => {

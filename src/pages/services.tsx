@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaCode, FaMobileAlt, FaServer, FaRobot } from 'react-icons/fa';
 
 const services = [

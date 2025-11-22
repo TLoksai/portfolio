@@ -1,5 +1,5 @@
 import { FaReact, FaGitAlt, FaPython, FaNodeJs } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiNextdotjs, SiFigma, SiFastapi, SiMongodb, SiSupabase, SiCapacitor, SiSelenium } from "react-icons/si";
+import { SiTypescript, SiTailwindcss, SiFigma, SiFastapi, SiMongodb, SiSupabase, SiCapacitor, SiSelenium } from "react-icons/si";
 
 const skills = [
   { name: "React", icon: <FaReact className="text-teal-600 text-5xl" />, level: "Expert" },

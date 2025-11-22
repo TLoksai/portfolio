@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./pages/shared/header";
 import Footer from "./pages/shared/footer";
 import Hero from "./pages/hero";
-import About from "./pages/about";
 import Who from "./pages/who";
 import Contact from "./pages/contact";
 import Skills from "./pages/skills";
@@ -14,7 +12,6 @@ import Testimonials from "./pages/testimonials";
 import CTA from "./pages/cta";
 import Projects1 from "./pages/projects1";
 import WhatsApp from "./pages/whatsapp";
-import Loader from "./pages/loader";
 
 const Home = () => (
   <>
@@ -63,28 +60,10 @@ const ContactPage = () => (
   </>
 );
 
-const AppContent = () => {
-  const location = useLocation();
-  const [loading, setLoading] = useState(true);
-  const [hasLoaded, setHasLoaded] = useState(false);
-
-  useEffect(() => {
-    // Show loader only on initial site load, not on route changes
-    if (!hasLoaded) {
-      const timer = setTimeout(() => {
-        setLoading(false);
-        setHasLoaded(true);
-      }, 2000);
-      return () => clearTimeout(timer);
-    } else {
-      // No loader for route changes
-      setLoading(false);
-    }
-  }, [hasLoaded]);
-
+const App = () => {
   return (
-    <div className="bg-white min-h-screen font-sans cursor-pointer">
-      <>
+    <Router>
+      <div className="bg-white min-h-screen font-sans cursor-pointer">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
@@ -95,15 +74,7 @@ const AppContent = () => {
 
         {/* ✅ WhatsApp Button (Visible on all pages) */}
         <WhatsApp />
-      </>
-    </div>
-  );
-};
-
-const App = () => {
-  return (
-    <Router>
-      <AppContent />
+      </div>
     </Router>
   );
 };

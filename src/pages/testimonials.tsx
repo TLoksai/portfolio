@@ -1,5 +1,4 @@
-import React from 'react';
-import { FaStar, FaQuoteLeft } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 
 const testimonials = [
   {
