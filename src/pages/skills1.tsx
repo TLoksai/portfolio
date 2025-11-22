@@ -1,42 +1,64 @@
 import { FaReact, FaGitAlt, FaPython, FaNodeJs } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiNextdotjs, SiFigma, SiFastapi, SiMongodb } from "react-icons/si";
+import { SiTypescript, SiTailwindcss, SiNextdotjs, SiFigma, SiFastapi, SiMongodb, SiSupabase, SiCapacitor, SiSelenium } from "react-icons/si";
 
 const skills = [
-  { name: "React", icon: <FaReact className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
-  { name: "java", icon: <SiNextdotjs className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
-  { name: "FastAPI", icon: <SiFastapi className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
-  { name: "Python", icon: <FaPython className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
-  { name: "Figma", icon: <SiFigma className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
-  { name: "Git", icon: <FaGitAlt className="text-[#138086] text-5xl transition-transform duration-300 hover:scale-110" /> },
+  { name: "React", icon: <FaReact className="text-teal-600 text-5xl" />, level: "Expert" },
+  { name: "TypeScript", icon: <SiTypescript className="text-blue-600 text-5xl" />, level: "Advanced" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500 text-5xl" />, level: "Expert" },
+  { name: "Python", icon: <FaPython className="text-yellow-500 text-5xl" />, level: "Advanced" },
+  { name: "FastAPI", icon: <SiFastapi className="text-teal-500 text-5xl" />, level: "Intermediate" },
+  { name: "Node.js", icon: <FaNodeJs className="text-green-600 text-5xl" />, level: "Intermediate" },
+  { name: "Supabase", icon: <SiSupabase className="text-green-500 text-5xl" />, level: "Advanced" },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-700 text-5xl" />, level: "Intermediate" },
+  { name: "Capacitor", icon: <SiCapacitor className="text-blue-500 text-5xl" />, level: "Intermediate" },
+  { name: "Selenium", icon: <SiSelenium className="text-gray-600 text-5xl" />, level: "Intermediate" },
+  { name: "Figma", icon: <SiFigma className="text-purple-600 text-5xl" />, level: "Advanced" },
+  { name: "Git", icon: <FaGitAlt className="text-orange-600 text-5xl" />, level: "Expert" },
 ];
 
 const Skills = () => {
-    return (
-      <section className="bg-gradient-to-b from-[#b9d5d6] to-white py-40">
-        <div className="container mx-auto text-center px-6 md:px-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Skills & Tools</h2>
-          <p className="text-gray-700 max-w-2xl mx-auto text-lg mb-16">
-            Technologies and tools I use to build scalable and efficient web applications. 
-            My expertise includes front-end frameworks, backend APIs, UI/UX design, and version control.
+  return (
+    <section className="bg-gradient-to-b from-[#b9d5d6] to-white py-40 px-6 md:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Proficient in modern development tools and frameworks
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-12">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105"
-              >
-                {skill.icon}
-                <p className="mt-4 text-lg font-semibold text-gray-900">{skill.name}</p>
-              </div>
-            ))}
-          </div>
         </div>
-      </section>
-    );
-  };
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="transition-transform duration-300 group-hover:scale-110">
+                  {skill.icon}
+                </div>
+                <span className="text-xs font-medium text-teal-600 bg-teal-50 px-2 py-1 rounded-full">
+                  {skill.level}
+                </span>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">{skill.name}</h3>
+
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div
+                  className={`h-2 rounded-full transition-all duration-1000 ${
+                    skill.level === 'Expert' ? 'bg-gradient-to-r from-teal-500 to-teal-600 w-full' :
+                    skill.level === 'Advanced' ? 'bg-gradient-to-r from-blue-500 to-blue-600 w-4/5' :
+                    'bg-gradient-to-r from-purple-500 to-purple-600 w-3/5'
+                  }`}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
   
 export default Skills;

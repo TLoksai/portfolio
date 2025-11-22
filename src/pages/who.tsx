@@ -1,126 +1,189 @@
 const Who = () => {
   return (
-    <section className="w-full">
-      {/* First Section - Who Am I */}
-      <div className="bg-gradient-to-b from-[#b9d5d6] to-white flex flex-col md:flex-row items-center justify-between px-6 md:px-20 lg:px-40 py-12 md:py-16 min-h-[70vh]">
-        {/* Image Section */}
-        <div className="relative w-full md:w-1/2 flex justify-center">
-          <img
-            src="/images/who1.png"
-            alt="Profile"
-            className="w-72 md:w-96 lg:w-[30rem] rounded-full"
-          />
-          <div className="absolute bottom-0 right-0 transform translate-x-1/3 translate-y-1/3">
-            <img
-              src="/images/symbol.png"
-              alt="Symbol"
-              className="w-16 md:w-20 lg:w-24"
-            />
+    <section className="w-full bg-gray-50">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-[#b9d5d6] via-white to-[#b9d5d6] py-20 px-6 md:px-12 lg:px-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="p-12 flex items-center justify-center bg-gradient-to-br from-teal-50 to-blue-50">
+                <img
+                  src="/images/who1.png"
+                  alt="About Me"
+                  className="w-full max-w-md h-auto object-contain"
+                />
+              </div>
+              <div className="p-12 flex flex-col justify-center">
+                <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+                  About <span className="text-teal-600">Me</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  Passionate Full-Stack Developer crafting digital experiences that matter. With expertise in modern web technologies and a commitment to excellence, I transform ideas into impactful solutions.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="bg-teal-100 text-teal-800 px-4 py-3 rounded-xl font-medium text-center">
+                  1+ Years Experience
+                  </div>
+                  <div className="bg-blue-100 text-blue-800 px-4 py-3 rounded-xl font-medium text-center">
+                    10+ Projects Completed
+                  </div>
+                  <div className="bg-green-100 text-green-800 px-4 py-3 rounded-xl font-medium text-center">
+                    Full-Stack Expertise
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        {/* Text Content */}
-        <div className="w-full md:w-1/2 text-left">
-          <h3 className="text-lg text-[#00796B] font-semibold">About Me</h3>
-          <h2 className="text-3xl font-bold text-gray-900">🚀 Who Am I?</h2>
-          <p className="text-gray-700 mt-4">
-            I craft modern, high-performing web experiences, bringing ideas to
-            life with clean, efficient code. My journey includes working with
-            various technologies to build scalable and user-friendly applications.
-          </p>
-
-          <h3 className="text-lg font-semibold text-[#00796B] mt-4">
-            💻 I Can Develop Anything You Need
-          </h3>
-          <p className="text-gray-700 mt-2">
-            From intuitive UI designs to dynamic web applications, I specialize
-            in creating seamless digital solutions using React, Tailwind, and more.
-          </p>
-
-          <h3 className="text-lg font-semibold text-[#00796B] mt-4">
-            🌍 Keeping Up with Digital Trends
-          </h3>
-          <p className="text-gray-700 mt-2">
-            I stay ahead of the curve by adapting to the latest technologies,
-            ensuring every project is future-proof, efficient, and visually stunning.
-          </p>
         </div>
       </div>
 
-      {/* Separator to Visually Divide Sections */}
-      <div className="w-full h-12 bg-white"></div>
+      {/* Main Content */}
+      <div className="py-20 px-6 md:px-12 lg:px-20">
+        <div className="max-w-6xl mx-auto">
+          {/* Story Section */}
+          <div className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+              My Journey
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-teal-600 mb-4">How It Started</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  My journey into web development began with curiosity and a passion for creating digital solutions.
+                  What started as learning HTML and CSS evolved into mastering modern frameworks and building
+                  scalable applications that serve real users.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  I believe technology should solve problems and enhance lives. Every project I work on is an
+                  opportunity to make a positive impact through clean, efficient, and user-centered design.
+                </p>
+              </div>
 
-      {/* Second Section - More About My Work */}
-      <div className="bg-gradient-to-b from-white to-[#b9d5d6] px-6 md:px-20 lg:px-40 py-12 md:py-16 rounded-t-3xl shadow-lg">
-        <h2 className="text-4xl font-bold text-gray-900 text-center mb-8">
-          More About My Work
-        </h2>
-
-        {/* Experience Section */}
-        <div className="bg-white p-6 md:p-8 rounded-lg shadow-md mb-6">
-          <h3 className="text-2xl font-semibold text-[#00796B] flex items-center">
-            🏆 My Experience
-          </h3>
-          <p className="text-gray-700 mt-2 leading-relaxed">
-            I have experience in front-end development and have worked with
-            multiple frameworks, ensuring fast and responsive user interfaces.
-          </p>
-        </div>
-
-        {/* Technologies Section */}
-        <div className="bg-white p-6 md:p-8 rounded-lg shadow-md mb-6">
-          <h3 className="text-2xl font-semibold text-[#00796B] flex items-center">
-            🔗 Technologies I Use
-          </h3>
-          <ul className="text-gray-700 mt-2 list-disc list-inside grid grid-cols-1 md:grid-cols-2 gap-2">
-            <li><span className="font-medium text-gray-900">React, Next.js, TypeScript</span></li>
-            <li><span className="font-medium text-gray-900">Tailwind CSS, Material UI</span></li>
-            <li><span className="font-medium text-gray-900">Node.js, NestJS</span></li>
-            <li><span className="font-medium text-gray-900">MongoDB, Firebase</span></li>
-            <li><span className="font-medium text-gray-900">Git, GitHub, CI/CD</span></li>
-          </ul>
-        </div>
-
-        {/* Work Philosophy Section */}
-        <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
-          <h3 className="text-2xl font-semibold text-[#00796B] flex items-center">
-            💡 My Work Philosophy
-          </h3>
-          <p className="text-gray-700 mt-2 leading-relaxed">
-            I believe in writing <span className="font-medium text-gray-900">clean, maintainable code</span>, 
-            collaborating effectively with teams, and always learning to improve my skills.
-          </p>
-        </div>
-      </div>
-
-      {/* Third Section - Contact */}
-      <div className="bg-gradient-to-b from-[#b9d5d6] to-white px-6 md:px-20 lg:px-40 py-12 md:py-16 min-h-[70vh]">
-        <h2 className="text-4xl font-bold text-gray-900 text-center mb-8">
-          Get In Touch
-        </h2>
-
-        <div className="relative flex flex-col md:flex-row items-center justify-between">
-          {/* Contact Form */}
-          <div className="w-full md:w-1/2 z-10">
-            <h3 className="text-lg text-[#00796B] font-semibold">Contact</h3>
-            <h2 className="text-3xl font-bold text-gray-900">Let's Connect</h2>
-            <form className="mt-6 space-y-4">
-              <input type="text" placeholder="Name:" className="w-full p-3 border rounded-md" />
-              <input type="email" placeholder="Email:" className="w-full p-3 border rounded-md" />
-              <textarea placeholder="Write Message:" className="w-full p-3 border rounded-md h-32"></textarea>
-              <button className="bg-[#138086] text-white px-6 py-3 rounded-md hover:bg-[#0F6B6B] w-full">
-                CONTACT US
-              </button>
-            </form>
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-teal-600 mb-4">What Drives Me</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  I'm driven by the challenge of turning complex problems into simple, elegant solutions.
+                  Whether it's optimizing performance, improving user experience, or implementing cutting-edge
+                  technologies, I thrive on continuous learning and growth.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                  projects, or sharing knowledge with the developer community.
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Contact Image */}
-          <div className="hidden md:block md:w-1/2 h-full absolute top-0 right-0 flex justify-end">
-            <img 
-              src="/images/contact1.png" 
-              alt="Contact" 
-              className="w-[110%] h-auto object-contain" 
-            />
+          {/* Skills & Expertise */}
+          <div className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+              Skills & Expertise
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">⚛️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Frontend Development</h3>
+                <p className="text-gray-600">
+                  React, Next.js, TypeScript, Tailwind CSS, and modern UI/UX principles for creating
+                  responsive and interactive web applications.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Backend Development</h3>
+                <p className="text-gray-600">
+                  Python FastAPI, Node.js, database design, and API development for robust and scalable
+                  server-side solutions.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">📱</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Mobile Development</h3>
+                <p className="text-gray-600">
+                  React Native, Expo, and Capacitor for cross-platform mobile applications that work
+                  seamlessly across iOS and Android.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">🎨</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">UI/UX Design</h3>
+                <p className="text-gray-600">
+                  Figma, design systems, and user-centered design principles to create intuitive and
+                  visually appealing interfaces.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">🔧</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">DevOps & Tools</h3>
+                <p className="text-gray-600">
+                  Git, CI/CD pipelines, testing frameworks, and modern development workflows for
+                  efficient and reliable deployments.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">🤖</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Automation & AI</h3>
+                <p className="text-gray-600">
+                  Web scraping, data processing, and AI integration to automate workflows and
+                  enhance application capabilities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Values Section */}
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+              What I Value
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🎯</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Quality First</h3>
+                <p className="text-gray-600">
+                  Every line of code matters. I focus on writing clean, maintainable, and scalable solutions.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🤝</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Collaboration</h3>
+                <p className="text-gray-600">
+                  Great products are built by great teams. I believe in open communication and shared success.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Continuous Learning</h3>
+                <p className="text-gray-600">
+                  Technology evolves rapidly. I stay curious and committed to lifelong learning and growth.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
