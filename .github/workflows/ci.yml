@@ -52,7 +52,12 @@ jobs:
       run: npm audit --audit-level moderate
 
     - name: Check for vulnerabilities
-      run: npm audit --audit-level moderate || echo "Vulnerabilities found, but continuing"
+      run: |
+        if npm audit --audit-level moderate; then
+          echo "No vulnerabilities found"
+        else
+          echo "Vulnerabilities found, but continuing with build"
+        fi
 
   accessibility-check:
     runs-on: ubuntu-latest
