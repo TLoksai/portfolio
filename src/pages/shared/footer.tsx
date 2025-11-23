@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="w-full md:w-1/3">
           <h2 className="text-4xl font-bold text-[#004D40]">LOKSAI</h2>
           <p className="mt-2 text-gray-600">
-            I'm a frontend developer currently working on projects and building modern UI experiences using React, Tailwind, and more.
+            I'm a full-stack developer crafting end-to-end solutions with modern technologies like React, Node.js, Python, and more.
           </p>
         </div>
 
