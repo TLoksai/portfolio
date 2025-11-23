@@ -8,7 +8,7 @@ const Who = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="p-12 flex items-center justify-center bg-gradient-to-br from-teal-50 to-blue-50">
                 <img
-                  src="/portfolio/images/who1.png"
+                  src="/images/who1.png"
                   alt="About Me"
                   className="w-full max-w-md h-auto object-contain"
                 />

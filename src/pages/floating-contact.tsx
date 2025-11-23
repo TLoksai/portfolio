@@ -79,7 +79,7 @@ const FloatingContact = () => {
               </button>
               <div className="flex items-center space-x-4">
                 <img
-                  src="/portfolio/images/loksai.png"
+                  src="/images/loksai.png"
                   alt="Loksai"
                   className="w-16 h-16 rounded-full object-cover border-2 border-white"
                 />

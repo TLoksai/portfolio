@@ -50,7 +50,7 @@ const About: React.FC = () => {
 
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/portfolio/images/sai.jpg"
+              src="/images/sai.jpg"
               alt="Tammineni Loksai"
               className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-2xl shadow-xl"
             />

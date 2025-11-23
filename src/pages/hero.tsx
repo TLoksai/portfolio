@@ -40,7 +40,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-teal-600/10 rounded-full transform rotate-3"></div>
               <div className="relative bg-white p-2 rounded-full shadow-2xl">
                 <img
-                  src="/portfolio/images/loksai.png"
+                  src="/images/loksai.png"
                   alt="Tammineni Loksai"
                   className="w-96 h-96 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] object-cover rounded-full"
                 />
